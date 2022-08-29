@@ -12,7 +12,7 @@ Astronaut app lists the astronauts and their bio information
 
 ## Language
 
-* Kotlin 1.7.0
+    Kotlin 1.7.0
 
 ## Features
 
@@ -40,7 +40,7 @@ Open workspace
 
 Run Unit Tests
 
-	$ ./gradlew build
+	$ ./gradlew test
 
 Build project
 
