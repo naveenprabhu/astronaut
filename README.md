@@ -2,7 +2,7 @@
 
 Astronaut app lists the astronauts and their bio information
 
-##Astronaut List Screen:
+## Astronaut List Screen:
 
 ![alt text](https://github.com/naveenprabhu/astronaut/blob/main/AstronautList.png)
 
