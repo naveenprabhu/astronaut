@@ -87,6 +87,52 @@ class AstronautListPresenterTest {
         then(verify(presenter.getView()).dismissSwipeRefresh())
     }
 
+    @Test
+    fun shouldSortByAscending() {
+
+        var astronauts = listOf<Astronaut>(
+            Astronaut(name = "Roberta"),
+            Astronaut(name = "Marcos"),
+            Astronaut(name = "Franz")
+        )
+
+        var expectedAstronautList = AstronautList(1, astronauts)
+        whenever(astronautService.getAstronauts()).thenReturn(Observable.just(expectedAstronautList))
+        presenter.getAstronauts()
+
+        val expectedAstronauts = listOf<Astronaut>(
+            Astronaut(name = "Franz"),
+            Astronaut(name = "Marcos"),
+            Astronaut(name = "Roberta")
+        )
+        presenter.sortByName(true)
+
+        then(assertThat(presenter.astronautList, `is`(expectedAstronauts)))
+    }
+
+    @Test
+    fun shouldSortByDescending() {
+
+        var astronauts = listOf<Astronaut>(
+            Astronaut(name = "Franz"),
+            Astronaut(name = "Marcos"),
+            Astronaut(name = "Roberta")
+        )
+
+        var expectedAstronautList = AstronautList(1, astronauts)
+        whenever(astronautService.getAstronauts()).thenReturn(Observable.just(expectedAstronautList))
+        presenter.getAstronauts()
+
+        val expectedAstronauts = listOf<Astronaut>(
+            Astronaut(name = "Roberta"),
+            Astronaut(name = "Marcos"),
+            Astronaut(name = "Franz")
+        )
+        presenter.sortByName(false)
+
+        then(assertThat(presenter.astronautList, `is`(expectedAstronauts)))
+    }
+
 
 
 

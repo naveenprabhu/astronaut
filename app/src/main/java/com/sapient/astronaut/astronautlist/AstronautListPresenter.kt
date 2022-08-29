@@ -43,6 +43,22 @@ class AstronautListPresenter @Inject constructor(astronautService: AstronautServ
             })
     }
 
+    fun sortByName(isAscending: Boolean) {
+
+        astronautList = if(isAscending) {
+            astronautList?.sortedBy {
+                it.name
+            }
+        } else {
+            astronautList?.sortedByDescending {
+                it.name
+            }
+        }
+
+        getView().updateAdapter()
+
+    }
+
     fun getAstronautAtPosition(position: Int): Astronaut {
         Timber.d("Astronaut list adapter at position $position")
         return astronautList?.get(position) ?: Astronaut()
