@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Astronaut</string>
+    <string name="app_name">Astronauts</string>
+    <string name="place_holder_name">Name</string>
+    <string name="place_holder_nationality">Nationality</string>
+    <string name="image_description">Image of Astronaut</string>
+    <string name="place_holder_dob">DOB</string>
+    <string name="error_title">Error</string>
+    <string name="ok_button">Ok</string>
+    <string name="error_message">Our systems are down, please try again later</string>
 </resources>

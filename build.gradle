@@ -1,10 +1,56 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-plugins {
-    id 'com.android.application' version '7.2.0' apply false
-    id 'com.android.library' version '7.2.0' apply false
-    id 'org.jetbrains.kotlin.android' version '1.6.10' apply false
+buildscript {
+    ext.kotlin_version = "1.7.0"
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.2.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// Define versions in a single place
+ext {
+    minSdkVersion = 26
+    targetSdkVersion = 29
+    compileSdkVersion = 33
+    androidXTestCoreVersion = '1.2.0'
+    androidXTestExtKotlinRunnerVersion = '1.1.1'
+    constraintLayoutVersion = '2.0.0-rc1'
+    appCompatVersion = '1.1.0'
+    junitVersion = '4.12'
+    espressoVersion = '3.2.0'
+    cardVersion = '1.0.0'
+    daggerVersion = '2.43.2'
+    recyclerViewVersion = '1.1.0'
+    materialVersion = '1.0.0'
+    timberVersion = '4.7.1'
+    retrofitVersion = '2.9.0'
+    gsonVerion = '2.8.6'
+    rxJavaVersion = '3.0.4'
+    coverterGsonVersion = '2.9.0'
+    rxAdapterVersion = '2.9.0'
+    loggingInterceptorVersion = '4.8.1'
+    jacksonVersion='2.11.0'
+    rxVersion='3.0.0'
+    mockitoVersion='2.2.0'
+    hamcrestVersion='2.2'
+    kotlinSerializationVersion='1.0-M1-1.4.0-rc'
+    picassoVersion='2.8'
 }
