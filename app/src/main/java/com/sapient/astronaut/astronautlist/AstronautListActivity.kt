@@ -1,11 +1,14 @@
 package com.sapient.astronaut.astronautlist
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.sapient.astronaut.AstronautApplication
 import com.sapient.astronaut.R
+import com.sapient.astronaut.astronautdetail.AstronautDetailActivity
+import com.sapient.astronaut.utils.Constants.ASTRONAUT_ID
 import kotlinx.android.synthetic.main.astronaut_list.*
 import javax.inject.Inject
 
@@ -38,6 +41,13 @@ class AstronautListActivity : AppCompatActivity(), AstronautListView {
         recyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = astronautAdapter
+        }
+
+        astronautAdapter.onItemClick = {astronautyee ->
+            var intent = Intent(this@AstronautListActivity, AstronautDetailActivity::class.java).apply {
+                putExtra(ASTRONAUT_ID, astronautyee.id)
+            }
+            this.startActivity(intent)
         }
 
     }

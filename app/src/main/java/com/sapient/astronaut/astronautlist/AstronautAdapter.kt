@@ -34,7 +34,7 @@ class AstronautAdapter @Inject constructor (private val presenter: AstronautList
             itemView.nameTextView.text = astronaut.name
             itemView.nationalityTextView.text = astronaut.nationality
             Picasso.get()
-                .load(astronaut.profileImage)
+                .load(astronaut.profileThumbnailImage)
                 .placeholder(R.drawable.noimage)
                 .into(itemView.imageView)
 

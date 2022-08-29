@@ -1,4 +1,4 @@
-package com.sapient.astronaut
+package com.sapient.astronaut.interceptor
 
 import android.content.Context
 import com.sapient.astronaut.utils.NetworkUtils

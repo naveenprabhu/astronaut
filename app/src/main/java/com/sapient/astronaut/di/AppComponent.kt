@@ -1,7 +1,8 @@
 package com.sapient.astronaut.di
 
 import android.content.Context
-import com.sapient.astronaut.ForceCacheInterceptor
+import com.sapient.astronaut.interceptor.ForceCacheInterceptor
+import com.sapient.astronaut.astronautdetail.AstronautDetailComponent
 import com.sapient.astronaut.astronautlist.AstronautListComponent
 import dagger.BindsInstance
 import dagger.Component
@@ -19,6 +20,7 @@ interface AppComponent {
 
     fun astronautListComponent() : AstronautListComponent.Factory
 
+    fun astronautDetailComponent() : AstronautDetailComponent.Factory
 
     fun forceCacheInterceptor() : ForceCacheInterceptor
 

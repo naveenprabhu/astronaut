@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/astronaut.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/astronaut_detail.xml" value="0.21822916666666667" />
         <entry key="app/src/main/res/layout/employee_list.xml" value="0.1" />
       </map>
     </option>

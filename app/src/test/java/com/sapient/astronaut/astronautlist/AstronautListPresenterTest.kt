@@ -1,4 +1,4 @@
-package com.sapient.astronaut
+package com.sapient.astronaut.astronautlist
 
 import com.nhaarman.mockitokotlin2.then
 import com.nhaarman.mockitokotlin2.verify

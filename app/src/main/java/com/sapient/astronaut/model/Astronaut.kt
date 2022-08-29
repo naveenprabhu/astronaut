@@ -7,6 +7,7 @@ data class Astronaut (
     var name: String = "N/A",
     var nationality: String = "N/A",
     var bio: String = "N/A",
-    @SerializedName("profile_image_thumbnail") var profileImage: String ="N/A",
+    @SerializedName("profile_image_thumbnail") var profileThumbnailImage: String ="N/A",
+    @SerializedName("profile_image") var profileImage: String ="N/A",
     @SerializedName("date_of_birth") var dateOfBirth: String = "N/A"
 )

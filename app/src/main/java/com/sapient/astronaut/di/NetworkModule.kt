@@ -3,7 +3,7 @@ package com.sapient.astronaut.di
 import android.content.Context
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.sapient.astronaut.ForceCacheInterceptor
+import com.sapient.astronaut.interceptor.ForceCacheInterceptor
 import com.sapient.astronaut.service.AstronautService
 import com.sapient.astronaut.utils.Constants.BASEURL
 import dagger.Module
